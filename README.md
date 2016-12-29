@@ -20,7 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Additional paramaters are available for some functions
+
+**CI Lower Bound of the Wilson core confidence interval for a Bernoulli distribution**
+
+http://www.evanmiller.org/how-not-to-sort-by-average-rating.html
+
+```ruby
+StatisticsCalc.two_point_ranking(first_count: 350, second_count: 15) == 0.9335708863805254
+```
+
+**Hot Rating**
+
+https://bibwild.wordpress.com/2012/05/08/reddit-story-ranking-algorithm
+
+```ruby
+# if Time.now = 2016-12-16 12:36:43 -0600 then
+StatisticsCalc.hot(upper_value: 350, lower_value: 15) == 551.3738607329627
+```
+
+**Performance Rating**
+
+```ruby
+StatisticsCalc.performance(upper_value: 350, lower_value: 15) == 2.5250448070368448
+```
+
+**Percent Delta**
+
+```ruby
+StatisticsCalc.percent_delta(current_value: 350, old_value: 15) == 22
+```
 
 ## Development
 

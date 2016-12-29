@@ -57,7 +57,7 @@ module StatisticsCalc
   # calculates the percent delta of two values
   # provide the new value and old value to compare
   # Use:
-  # StatisticsCalc.percent_delta(350, 15) = 22
+  # StatisticsCalc.percent_delta(current_value: 350, old_value: 15) = 22
   def StatisticsCalc.percent_delta(current_value: 0, old_value: 0)
     return 0 if old_value == 0
     (current_value - old_value) / old_value

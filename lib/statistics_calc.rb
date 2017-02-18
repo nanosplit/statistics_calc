@@ -63,6 +63,12 @@ module StatisticsCalc
     (current_value - old_value) / old_value
   end
 
+  def StatisticsCalc.percent_change(new_count, old_count)
+    difference = new_count - old_count
+    percent_change = difference.to_f / old_count * 100
+    percent_change
+  end
+
   private
 
   # determine the time in seconds since epoch
